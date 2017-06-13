@@ -1,0 +1,15 @@
+.productListing {
+	h3 {
+		a{
+			color: #265861;
+			text-decoration: none;
+			&:hover{
+				color: #000;
+			}
+		}
+	}
+	img{
+		height: 150px;
+	}
+	
+}

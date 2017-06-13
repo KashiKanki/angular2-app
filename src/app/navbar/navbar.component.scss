@@ -1,0 +1,17 @@
+.navbar-default {
+    background-color: #243a3e;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #265861;
+}
+
+.quantity {
+	background: #265861;
+	a{
+		color: #fff;
+		font-weight: bold;
+	}
+}
