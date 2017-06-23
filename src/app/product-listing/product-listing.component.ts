@@ -1,20 +1,20 @@
 import { Component, OnInit} from '@angular/core';
 import { Input } from '@angular/core';
+import { ListingService } from '../services/product/listing.service';
 import * as _ from 'underscore';
-
-
 
 @Component({
   selector: 'app-product-listing',
   templateUrl: './product-listing.component.html',
-  styleUrls: ['./product-listing.component.scss']
+  styleUrls: ['./product-listing.component.scss'],
+  providers: [ListingService]
 })
 export class ProductListingComponent implements OnInit {
 	
-  constructor() { }
+  constructor( private listingService: ListingService ) { }
 
-
-  public proListing = [
+  public proListing = [];
+  /*public proListing = [
   	{
   		proImg: 'https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBLENOVO-VIBE-A-TO2519725AF095B8/0x1920/70/0.jpeg',
   		name: 'XLenovo Vibe K5',
@@ -93,7 +93,7 @@ export class ProductListingComponent implements OnInit {
   		price: '56000',
   		screenSize: 5.75
   	}
-  ];
+  ];*/
    
   onChange(proSorting) {
     var proName = _.sortBy(this.proListing, 'name');
@@ -110,7 +110,7 @@ export class ProductListingComponent implements OnInit {
     var proName = _.sortBy(this.proListing, 'name');
     var proPrice = _.sortBy(this.proListing, 'price');
 
-       
+    this.listingService.fetchData();
   }
 
  
