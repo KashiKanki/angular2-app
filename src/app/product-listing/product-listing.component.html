@@ -1,10 +1,20 @@
+<div class="sorting" style="margin: 20px 0;">
+  <div>
+    <select (change)="onChange($event.target.value)">
+      <option value="1">-- Select any --</option>
+      <option value="name">By Name</option>
+      <option value="proPrice">By Price</option>
+    </select>
+  </div>
+</div>
+
 <div class="row productListing">
   
   <div class="col-sm-6 col-md-4" *ngFor="let proList of proListing">
     <div class="thumbnail">
       <a href="#"><img height="100" src="https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBLENOVO-VIBE-A-TO2519725AF095B8/0x1920/70/0.jpeg" alt="Lenovo Vibe K5"></a>
       <div class="caption">
-        <h3><a href="#">{{proList.name}}</a></h3>
+        <h3><a href="#">{{proList.name | uppercase}}</a></h3>
         <p>Rs. {{proList.price}}  
           <span class="disApplied" *ngIf="proList.discount"> 
             <!-- Discount {{proList.discount.d2}} % -->

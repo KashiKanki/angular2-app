@@ -1,20 +1,4 @@
-import { Component, OnInit} from '@angular/core';
-import { Input } from '@angular/core';
-import * as _ from 'underscore';
-
-
-
-@Component({
-  selector: 'app-product-listing',
-  templateUrl: './product-listing.component.html',
-  styleUrls: ['./product-listing.component.scss']
-})
-export class ProductListingComponent implements OnInit {
-	
-  constructor() { }
-
-
-  public proListing = [
+[
   	{
   		proImg: 'https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBLENOVO-VIBE-A-TO2519725AF095B8/0x1920/70/0.jpeg',
   		name: 'XLenovo Vibe K5',
@@ -93,25 +77,4 @@ export class ProductListingComponent implements OnInit {
   		price: '56000',
   		screenSize: 5.75
   	}
-  ];
-   
-  onChange(proSorting) {
-    var proName = _.sortBy(this.proListing, 'name');
-    var proPrice = _.sortBy(this.proListing, 'price');
-    if(proSorting == "name"){
-      this.proListing = proName;
-    }else{
-      this.proListing = proPrice; 
-    }
-  }
-
-  ngOnInit() {
-    
-    var proName = _.sortBy(this.proListing, 'name');
-    var proPrice = _.sortBy(this.proListing, 'price');
-
-       
-  }
-
- 
-}
+  ]
