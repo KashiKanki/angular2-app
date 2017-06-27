@@ -1,13 +1,17 @@
 import { Component, OnInit} from '@angular/core';
 import { Input } from '@angular/core';
 import { ListingService } from '../services/product/listing.service';
-import * as _ from 'underscore';
+import { FilterPipe } from '../filter.pipe'; 
+
+import * as _ from 'underscore'; 
 
 @Component({
   selector: 'app-product-listing',
   templateUrl: './product-listing.component.html',
   styleUrls: ['./product-listing.component.scss'],
-  providers: [ListingService]
+  providers: [ListingService, FilterPipe]
+  //pipes: [FilterPipe]
+
 })
 export class ProductListingComponent implements OnInit {
 	
@@ -110,7 +114,10 @@ export class ProductListingComponent implements OnInit {
     var proName = _.sortBy(this.proListing, 'name');
     var proPrice = _.sortBy(this.proListing, 'price');
 
-    this.listingService.fetchData();
+    this.listingService.fetchData().subscribe(
+      //(data) => console.log(data);
+      (data) => this.proListing = data
+    );
   }
 
  

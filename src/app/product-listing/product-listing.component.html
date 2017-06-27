@@ -5,12 +5,20 @@
       <option value="name">By Name</option>
       <option value="proPrice">By Price</option>
     </select>
+    
+    <form id="filter">
+        <label> Filter by Name</label> 
+        <input type="text" name="serachtext" [(ngModel)]="term" />
+    </form> 
+    
   </div>
 </div>
 
+    
+
 <div class="row productListing">
   
-  <div class="col-sm-6 col-md-4" *ngFor="let proList of proListing">
+  <div class="col-sm-6 col-md-4" *ngFor="let proList of proListing | filter:term">
     <div class="thumbnail">
       <a href="#"><img height="100" src="https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBLENOVO-VIBE-A-TO2519725AF095B8/0x1920/70/0.jpeg" alt="Lenovo Vibe K5"></a>
       <div class="caption">

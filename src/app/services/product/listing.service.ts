@@ -11,10 +11,7 @@ export class ListingService {
   fetchData(){
     return this.http.get('../assets/services/products.json').map(
         (res) => res.json()
-      ).subscribe(
-        (data) => console.log(data) 
-    );
-
+      );
   }
 
 }
