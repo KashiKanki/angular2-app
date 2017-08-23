@@ -100,6 +100,7 @@ export class ProductListingComponent implements OnInit {
   ];*/
    
   onChange(proSorting) {
+    console.log(proSorting);
     var proName = _.sortBy(this.proListing, 'name');
     var proPrice = _.sortBy(this.proListing, 'price');
     if(proSorting == "name"){
@@ -120,5 +121,14 @@ export class ProductListingComponent implements OnInit {
     );
   }
 
+  addCart(event) { 
+    var thisEleId = event.srcElement.id;
+    var productName = this.proListing[thisEleId].name;
+    var productPrice = this.proListing[thisEleId].price;
+    var productImg = this.proListing[thisEleId].proImg;
+
+    console.log(productPrice);
+    event.preventDefault();
+  } 
  
 }

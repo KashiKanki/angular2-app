@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   public happyText = "I m on vaction";
   public myTodoList = [
@@ -20,6 +22,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   	this.happyText = "I m sick not!!";
+    this.router.navigate(['/content-part']); // To make content part to laod on page load.
   }
 
   makeMeHappy(){

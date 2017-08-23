@@ -1,6 +1,13 @@
 <h1>Lenovo Vibe K5 Note 64 GB (Dark Grey,4 GB RAM)</h1>
 <p>Use promocode - BLAST30BLAST30:Free Movie Ticket* and FLAT 30% cashback* on shopping order (Max Cashback Rs. 5,000). Your unique movie ticket promo code will be sent to you via email. COD not applicable.</p>
 
+<h3 ngNonBindable>// To Load any component on page load or blank url<br>
+	1) We have done this on navbar.component.ts<br>
+	2) You have to import  <strong >import  Router from @angular/router </strong>; <br>
+	3)  navbar.component.ts then add this on <strong>constructor( private router: Router)</strong><br>
+	4) add this on <strong>ngOnInit</strong> funtion <strong>this.router.navigate(['/content-part']);</strong>
+</h3>
+
 <app-sorting></app-sorting>
 
 <app-product-listing></app-product-listing>

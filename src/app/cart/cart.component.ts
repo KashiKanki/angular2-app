@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProductListingComponent } from '../product-listing/product-listing.component';
+
 
 @Component({
   selector: 'app-cart',
@@ -12,4 +14,5 @@ export class CartComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input() reviews: number;
 }

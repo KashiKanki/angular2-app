@@ -1,3 +1,4 @@
+
 .navbar-default {
     background-color: #243a3e;
 }
@@ -8,6 +9,9 @@
     background-color: #265861;
 }
 
+.navbar-nav>li>a.active{
+	background-color: #265861 !important;
+}
 .quantity {
 	background: #265861;
 	a{

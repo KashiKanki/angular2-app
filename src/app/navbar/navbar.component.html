@@ -1,8 +1,8 @@
-<h1> {{happyText}} </h1> 
+<!-- <h1> {{happyText}} </h1> 
 <button (click)="makeMeHappy()">Make me happy sdfsdf</button>
 <ol>
   <li *ngFor="let todo of myTodoList" > {{todo}} </li>
-</ol>
+</ol> -->
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -20,21 +20,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Products</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+        <li><a href="#" routerLink="/content-part" routerLinkActive="active">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#" routerLink="/aboutus" routerLinkActive="active">About</a></li>
+        <li><a href="#" routerLink="/product-detail" routerLinkActive="active" >Products</a></li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">

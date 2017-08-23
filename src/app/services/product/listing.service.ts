@@ -9,9 +9,9 @@ export class ListingService {
   constructor(private http: Http) { }
 
   fetchData(){
-    return this.http.get('../assets/services/products.json').map(
-        (res) => res.json()
-      );
+  	return this.http.get('../assets/services/products.json').map(
+    	(res) => res.json()
+    );
   }
 
 }

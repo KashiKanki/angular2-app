@@ -3,13 +3,17 @@
 
 <app-navbar></app-navbar>
 <app-header></app-header>
-
 <div class="row noMargin">
   <div class="col-xs-12 col-sm-3">
     <app-search></app-search>
     <app-cart></app-cart>
   </div>
   <div class="col-xs-12 col-sm-9">
-    <app-content-part></app-content-part>
+
+	<router-outlet></router-outlet>
+
+	<!-- <app-content-part></app-content-part> -->
+
+    
   </div>
 </div>
